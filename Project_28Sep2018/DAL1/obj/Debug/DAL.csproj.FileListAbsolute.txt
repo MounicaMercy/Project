@@ -1,6 +1,6 @@
 D:\Project\Project_28Sep2018\DAL1\bin\Debug\DAL1.dll
 D:\Project\Project_28Sep2018\DAL1\bin\Debug\DAL1.pdb
-D:\Project\Project_28Sep2018\DAL1\obj\Debug\DAL.csprojAssemblyReference.cache
 D:\Project\Project_28Sep2018\DAL1\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Project\Project_28Sep2018\DAL1\obj\Debug\DAL1.dll
 D:\Project\Project_28Sep2018\DAL1\obj\Debug\DAL1.pdb
+D:\Project\Project_28Sep2018\DAL1\obj\Debug\DAL.csprojAssemblyReference.cache

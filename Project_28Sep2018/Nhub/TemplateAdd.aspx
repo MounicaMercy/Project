@@ -125,8 +125,9 @@ input:checked + .slider:before {
                 <asp:Label ID="SLlbl" runat="server" Text="Service Line:" CssClass="auto-style3"></asp:Label>
             </td>
             <td class="auto-style5">
-                <asp:DropDownList ID="ServiceLineDDL" runat="server" Height="25px" Width="149px" CssClass="auto-style3">
+                <asp:DropDownList ID="ServiceLineDDL" runat="server" Height="25px" Width="220px" CssClass="auto-style3" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
                 </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Id], [Name] FROM [ServiceLine]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
@@ -134,8 +135,9 @@ input:checked + .slider:before {
                 <asp:Label ID="Notlbl" runat="server" Text="Notification" CssClass="auto-style3"></asp:Label>
             </td>
             <td class="auto-style7">
-                <asp:DropDownList ID="NotificationDDL" runat="server" Height="25px" Width="149px" CssClass="auto-style3">
+                <asp:DropDownList ID="NotificationDDL" runat="server" Height="25px" Width="220px" CssClass="auto-style3" DataSourceID="SqlDataSource2" DataTextField="Name" DataValueField="Id">
                 </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Name], [Id], [SourceId], [Mandatory] FROM [Event]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
@@ -143,7 +145,7 @@ input:checked + .slider:before {
                 <asp:Label ID="TempNamelbl" runat="server" Text="Template Name" CssClass="auto-style3"></asp:Label>
             </td>
             <td class="auto-style12">
-                <asp:TextBox ID="TemplateName" runat="server" Width="140px" CssClass="auto-style3"></asp:TextBox>
+                <asp:TextBox ID="TemplateName" runat="server" Width="220px" CssClass="auto-style3"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -161,13 +163,13 @@ input:checked + .slider:before {
         <tr>
             <td class="auto-style11">
                 <asp:Label ID="Schnlbl" runat="server" Text="Select Channel" CssClass="auto-style3"></asp:Label>
-            </td>
+                <span class="auto-style3">:</span></td>
             <td class="auto-style12">
                 &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3" colspan="2">
-                <span class="auto-style3">&nbsp;<asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                <span class="auto-style3"><asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                 &nbsp;&nbsp;&nbsp;&nbsp; </span>
                 </td>
         </tr>

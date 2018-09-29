@@ -2,36 +2,34 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Model;
+using DAL1.Model;
 
-namespace DAL.Repository
+namespace DAL1.Repository
 {
-    public class ChannelRepository
+    public class EventRepository
     {
         SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
-        public List<Channel> GetChannel()
+        public List<Events> GetEvents()
         {
-            List<Channel> BrandList = new List<Channel>();
+            List<Events> EventList = new List<Events>();
             DefaultConnection.Open();
-            string sql = "Select * From Channel";
+            string sql = "Select * From Event";
             SqlCommand myCommand = new SqlCommand(sql, DefaultConnection);
-            Channel b;
+            Events e;
             using (SqlDataReader dr = myCommand.ExecuteReader())
             {
                 while (dr.Read())
                 {
-                    b = new Channel
+                    e = new Events
                     {
-                        ChannelId = Convert.ToInt32(dr["Id"].ToString()),
-                        ChannelName = dr["Name"].ToString()
+                        EventId = Convert.ToInt32(dr["Id"].ToString()),
+                        EventName = dr["Name"].ToString(),
+                        SId = Convert.ToInt32(dr["SourceId"].ToString()),
                     };
-                    BrandList.Add(b);
+                    EventList.Add(e);
                 }
             }
-            return BrandList;
+            return EventList;
         }
     }
 }

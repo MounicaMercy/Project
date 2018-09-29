@@ -51,27 +51,27 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <%if (Context.User.IsInRole("Super Admin"))
+                        <%if (Context.User.IsInRole("SuperAdmin"))
                             { %>
                                 <li><a runat="server" href="~/Sources">Sources</a></li>
-                        <%}if (Context.User.IsInRole("Super Admin"))
+                        <%}if (Context.User.IsInRole("SuperAdmin"))
                             {%>
                                 <li><a runat="server"  id="SAServiceLines" href="~/SAServiceLines">Service Lines</a></li>
                         <%}
-                            if (Context.User.IsInRole("ServiceLine Manager"))
+                            if (Context.User.IsInRole("ServiceLineManager"))
                             { %>
                                 <li><a runat="server" id="SLMServiceLines" href="~/SLMServiceLines">Service Lines</a></li>
                         <%}
-                            if (Context.User.IsInRole("Operation Manager"))
+                            if (Context.User.IsInRole("OperationManager"))
                             { %>
                                 <li><a runat="server" href="~/Templates">Templates</a></li>
                         <%} %>
                         <li><a runat="server" href="~/">Notifications</a></li>
                         <li><a runat="server" href="~/">Dashboards</a></li>
-                            <%if (Context.User.IsInRole("Super Admin"))
+                            <%if (Context.User.IsInRole("SuperAdmin"))
                                 { %>
                                 <li><a runat="server" href="~/">Access</a></li>
-                        <%}if (Context.User.IsInRole("ServiceLine Manager"))
+                        <%}if (Context.User.IsInRole("ServiceLineManager"))
                             {%>
                                 <li><a runat="server" href="~/">Approvals</a></li>
                         <%} %>

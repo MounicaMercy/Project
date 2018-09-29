@@ -2,36 +2,33 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Model;
+using DAL1.Model;
 
-namespace DAL.Repository
+namespace DAL1.Repository
 {
-    public class ChannelRepository
+    public class SourceRepository
     {
         SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
-        public List<Channel> GetChannel()
+        public List<Source> GetSource()
         {
-            List<Channel> BrandList = new List<Channel>();
+            List<Source> SourceList = new List<Source>();
             DefaultConnection.Open();
-            string sql = "Select * From Channel";
+            string sql = "Select * From Source";
             SqlCommand myCommand = new SqlCommand(sql, DefaultConnection);
-            Channel b;
+            Source s;
             using (SqlDataReader dr = myCommand.ExecuteReader())
             {
                 while (dr.Read())
                 {
-                    b = new Channel
+                    s = new Source
                     {
-                        ChannelId = Convert.ToInt32(dr["Id"].ToString()),
-                        ChannelName = dr["Name"].ToString()
+                        SourceId = Convert.ToInt32(dr["Id"].ToString()),
+                        SourceName = dr["Name"].ToString()
                     };
-                    BrandList.Add(b);
+                    SourceList.Add(s);
                 }
             }
-            return BrandList;
+            return SourceList;
         }
     }
 }
