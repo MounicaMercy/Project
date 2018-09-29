@@ -13,6 +13,24 @@ namespace Nhub {
     public partial class SiteMaster {
         
         /// <summary>
+        /// SAServiceLines control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor SAServiceLines;
+        
+        /// <summary>
+        /// SLMServiceLines control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor SLMServiceLines;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

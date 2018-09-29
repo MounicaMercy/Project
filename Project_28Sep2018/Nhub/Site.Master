@@ -1,12 +1,13 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Nhub.SiteMaster" %>
 
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - My Notification Application</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -45,13 +46,36 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">NHub</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <%if (Context.User.IsInRole("Super Admin"))
+                            { %>
+                                <li><a runat="server" href="~/Sources">Sources</a></li>
+                        <%}if (Context.User.IsInRole("Super Admin"))
+                            {%>
+                                <li><a runat="server"  id="SAServiceLines" href="~/SAServiceLines">Service Lines</a></li>
+                        <%}
+                            if (Context.User.IsInRole("ServiceLine Manager"))
+                            { %>
+                                <li><a runat="server" id="SLMServiceLines" href="~/SLMServiceLines">Service Lines</a></li>
+                        <%}
+                            if (Context.User.IsInRole("Operation Manager"))
+                            { %>
+                                <li><a runat="server" href="~/Templates">Templates</a></li>
+                        <%} %>
+                        <li><a runat="server" href="~/">Notifications</a></li>
+                        <li><a runat="server" href="~/">Dashboards</a></li>
+                            <%if (Context.User.IsInRole("Super Admin"))
+                                { %>
+                                <li><a runat="server" href="~/">Access</a></li>
+                        <%}if (Context.User.IsInRole("ServiceLine Manager"))
+                            {%>
+                                <li><a runat="server" href="~/">Approvals</a></li>
+                        <%} %>
+                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -83,3 +107,4 @@
     </form>
 </body>
 </html>
+

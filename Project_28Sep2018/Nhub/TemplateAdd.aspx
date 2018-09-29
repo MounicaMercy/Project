@@ -163,25 +163,13 @@ input:checked + .slider:before {
                 <asp:Label ID="Schnlbl" runat="server" Text="Select Channel" CssClass="auto-style3"></asp:Label>
             </td>
             <td class="auto-style12">
-                <asp:DropDownList ID="SelectChannelDDl" runat="server" CssClass="auto-style3" Height="25px" Width="149px">
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr class="auto-style2">
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+                &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style10">&nbsp;</td>
-            <td>
-                <asp:TextBox ID="CodeTxt" runat="server" CssClass="auto-style3" Width="137px"></asp:TextBox>
-                <span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                <asp:Button ID="UploadBtn" runat="server" CssClass="auto-style3" Text="Upload" Width="117px" />
-            </td>
-        </tr>
-        <tr class="auto-style2">
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3" colspan="2">
+                <span class="auto-style3">&nbsp;<asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                &nbsp;&nbsp;&nbsp;&nbsp; </span>
+                </td>
         </tr>
         <tr class="auto-style2">
             <td class="auto-style10">&nbsp;</td>
