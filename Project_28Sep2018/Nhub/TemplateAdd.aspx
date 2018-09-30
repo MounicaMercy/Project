@@ -111,6 +111,9 @@ input:checked + .slider:before {
             .auto-style14 {
                 height: 33px;
             }
+            .auto-style15 {
+                height: 20px;
+            }
         </style>
         <tr>
             <td class="auto-style8">&nbsp;</td>
@@ -118,7 +121,7 @@ input:checked + .slider:before {
         </tr>
         <tr>
             <td class="auto-style9"></td>
-            <td style="height: 20px"></td>
+            <td class="auto-style15"></td>
         </tr>
         <tr>
             <td class="auto-style4">
@@ -165,13 +168,17 @@ input:checked + .slider:before {
                 <asp:Label ID="Schnlbl" runat="server" Text="Select Channel" CssClass="auto-style3"></asp:Label>
                 <span class="auto-style3">:</span></td>
             <td class="auto-style12">
-                &nbsp;</td>
+                <asp:DropDownList ID="ChannelDDL" runat="server" CssClass="auto-style3" DataSourceID="SqlDataSource3" DataTextField="Name" DataValueField="Id" Height="25px" Width="220px">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Name], [Id] FROM [Channel]"></asp:SqlDataSource>
+                <asp:Button ID="Upload" runat="server" CssClass="auto-style3" OnClick="Upload_Click" Text="Upload" Width="111px" />
+            </td>
         </tr>
-        <tr>
-            <td class="auto-style3" colspan="2">
-                <span class="auto-style3"><asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-                &nbsp;&nbsp;&nbsp;&nbsp; </span>
-                </td>
+        <tr class="auto-style2">
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style3">
+                <asp:TextBox ID="uplaodtxt" runat="server" Width="220px"></asp:TextBox>
+            </td>
         </tr>
         <tr class="auto-style2">
             <td class="auto-style10">&nbsp;</td>
@@ -180,14 +187,10 @@ input:checked + .slider:before {
         <tr>
             <td class="auto-style10">&nbsp;</td>
             <td>
-                <asp:Button ID="CreateBtn" runat="server" CssClass="auto-style3" Text="Create" Width="106px" OnClick="CreateBtn_Click" />
+                <asp:Button ID="CreateBtn" runat="server" CssClass="auto-style3" Text="Create" Width="111px" OnClick="CreateBtn_Click" />
                 <span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                 <asp:Button ID="CancelBtn" runat="server" CssClass="auto-style3" OnClick="CancelBtn_Click" Text="Cancel" Width="111px" />
             </td>
-        </tr>
-        <tr class="auto-style2">
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
         </tr>
         </table>
 </asp:Content>

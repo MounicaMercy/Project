@@ -14,7 +14,7 @@ namespace DAL.Repository
         SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
         public List<Channel> GetChannel()
         {
-            List<Channel> BrandList = new List<Channel>();
+            List<Channel> ChannelList = new List<Channel>();
             DefaultConnection.Open();
             string sql = "Select * From Channel";
             SqlCommand myCommand = new SqlCommand(sql, DefaultConnection);
@@ -28,10 +28,11 @@ namespace DAL.Repository
                         ChannelId = Convert.ToInt32(dr["Id"].ToString()),
                         ChannelName = dr["Name"].ToString()
                     };
-                    BrandList.Add(b);
+                    ChannelList.Add(b);
                 }
             }
-            return BrandList;
+            return ChannelList;
         }
+        
     }
 }

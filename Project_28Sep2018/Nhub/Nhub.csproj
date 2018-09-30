@@ -220,6 +220,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="TemplateAdd.aspx" />
+    <Content Include="TemplateDelete.aspx" />
     <Content Include="Templates.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -391,6 +392,12 @@
     <Compile Include="TemplateAdd.aspx.designer.cs">
       <DependentUpon>TemplateAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TemplateDelete.aspx.cs">
+      <DependentUpon>TemplateDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateDelete.aspx.designer.cs">
+      <DependentUpon>TemplateDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Templates.aspx.cs">
       <DependentUpon>Templates.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -421,9 +428,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL1\DAL.csproj">
+    <ProjectReference Include="..\DAL1\DAL1.csproj">
       <Project>{3d2eeb30-5033-48aa-8e06-42b3272b315d}</Project>
-      <Name>DAL</Name>
+      <Name>DAL1</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
