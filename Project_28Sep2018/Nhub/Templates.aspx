@@ -4,6 +4,11 @@
         Welcome to templates page..</p>
     <p style="font-size: large">
         Sources :</p>
+    <p style="font-size: large">
+        <asp:TreeView ID="TreeView1" runat="server">
+        </asp:TreeView>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    </p>
     <p>
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     </p>

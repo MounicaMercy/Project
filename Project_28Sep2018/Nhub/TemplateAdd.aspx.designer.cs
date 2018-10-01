@@ -94,6 +94,15 @@ namespace Nhub {
         protected global::System.Web.UI.WebControls.Label MElbl;
         
         /// <summary>
+        /// MandatoryEventRDL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList MandatoryEventRDL;
+        
+        /// <summary>
         /// Schnlbl control.
         /// </summary>
         /// <remarks>
@@ -112,13 +121,22 @@ namespace Nhub {
         protected global::System.Web.UI.WebControls.DropDownList ChannelDDL;
         
         /// <summary>
-        /// SqlDataSource3 control.
+        /// SqlDataSource4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+        
+        /// <summary>
+        /// URL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox URL;
         
         /// <summary>
         /// Upload control.
@@ -130,13 +148,13 @@ namespace Nhub {
         protected global::System.Web.UI.WebControls.Button Upload;
         
         /// <summary>
-        /// uplaodtxt control.
+        /// uploadlbltxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uplaodtxt;
+        protected global::System.Web.UI.WebControls.Label uploadlbltxt;
         
         /// <summary>
         /// CreateBtn control.

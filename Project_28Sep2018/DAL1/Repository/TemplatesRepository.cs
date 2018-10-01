@@ -4,12 +4,12 @@ using System.Data.SqlClient;
 using System;
 using System.Data;
 using DAL.Model;
+using System.Collections.Generic;
 
 namespace DAL.Repository
 {
     public class TemplatesRepository
     {
-        
         public void Insert(string Templatename, string oid, int ServiceLineID, int NotificationId,int ApprovalStatus)
         {
              SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
@@ -24,7 +24,6 @@ namespace DAL.Repository
                 cmd.Parameters.AddWithValue("@ApprovalStatusId", ApprovalStatus);
                 cmd.ExecuteNonQuery();
                 DefaultConnection.Close();
-           
         }
         public string Getid(string name)
         {
@@ -38,8 +37,6 @@ namespace DAL.Repository
             return s;
             DefaultConnection.Close();
             DefaultConnection.Dispose();
-           
-
         }
         public void InsertUrl(int TemplateID, int ChannelId, string Url, int ApprovalStatus)
         {
@@ -51,7 +48,7 @@ namespace DAL.Repository
             cmd.Parameters.AddWithValue("@TemplateID", TemplateID);
             cmd.Parameters.AddWithValue("@ChannelId", ChannelId);
             cmd.Parameters.AddWithValue("@Url", Url);
-            cmd.Parameters.AddWithValue("@ApprovalStatus", ApprovalStatus);
+            cmd.Parameters.AddWithValue("@ApprovalStatusId", ApprovalStatus);
             cmd.ExecuteNonQuery();
             DefaultConnection.Close();
         }
@@ -60,12 +57,10 @@ namespace DAL.Repository
             SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
             DefaultConnection.Open();
             SqlCommand cmd = new SqlCommand();
-            cmd = new SqlCommand("select Id from Template where Name='"+ name+"'", DefaultConnection);
+            cmd = new SqlCommand("select Id from Template where Name='"+name+"'" , DefaultConnection);
             object o = cmd.ExecuteScalar();
-            int s = Convert.ToInt32(o.ToString());
+            int s =Convert.ToInt32( o.ToString());
             return s;
-            DefaultConnection.Close();
-            DefaultConnection.Dispose();
         }
         public Templates GetTemplates(int id)
         {
@@ -100,6 +95,15 @@ namespace DAL.Repository
             DefaultConnection.Close();
             DefaultConnection.Dispose();
         }
-
+        public void UpdateStatus()
+        {
+            SqlConnection DefaultConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString.ToString());
+            DefaultConnection.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand("UPDATE TemplateChannel set ApprovalStatusId=2 where TemplateId in (SELECT T.Id FROM  Template T WHERE T.ApprovalStatusId =2)", DefaultConnection);
+            cmd.ExecuteNonQuery();
+            DefaultConnection.Close();
+        }
+        
     }
 }

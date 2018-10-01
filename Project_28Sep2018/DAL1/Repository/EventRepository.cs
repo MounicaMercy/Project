@@ -31,5 +31,27 @@ namespace DAL1.Repository
             }
             return EventList;
         }
+        public List<Events> GetEventsid(int sid)
+        {
+            List<Events> EventList = new List<Events>();
+            DefaultConnection.Open();
+            string sql = "Select * From Event where SourceId="+sid;
+            SqlCommand myCommand = new SqlCommand(sql, DefaultConnection);
+            Events e;
+            using (SqlDataReader dr = myCommand.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    e = new Events
+                    {
+                        EventId = Convert.ToInt32(dr["Id"].ToString()),
+                        EventName = dr["Name"].ToString(),
+                        SId = Convert.ToInt32(dr["SourceId"].ToString()),
+                    };
+                    EventList.Add(e);
+                }
+            }
+            return EventList;
+        }
     }
 }

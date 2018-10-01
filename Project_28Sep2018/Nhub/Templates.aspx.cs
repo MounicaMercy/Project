@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL.Model;
+using DAL.Repository;
 using DAL1.Model;
 using DAL1.Repository;
 
@@ -9,52 +11,45 @@ namespace Nhub
 {
     public partial class Templates : System.Web.UI.Page
     {
-        public object NotificationsBody { get; private set; }
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //LinkButton[] LB;
-            //PlaceHolder[] PH;
-            //int NoOfSources;
 
-            //EventRepository Obj = new EventRepository();
-            //List<Source> ListOfSources = new List<Source>();
-            //ListOfSources = Obj.
-            //NoOfSources = ListOfSources.Count;
-            //List<Events> ListOfEvents = new List<Events>();
+            if (!Context.User.IsInRole("OperationManager"))
+            {
+                Response.Redirect("NotAuthorized.aspx");
+            }
+            Table T = new Table();
+            SourceRepository Sr = new SourceRepository();
+            List<Source> L = Sr.GetSource();
+            EventRepository ER = new EventRepository();
+            TemplateEventRepository TE = new TemplateEventRepository();
+            foreach (Source s in L)
+            {
+                Label SourceName = new Label();
+                SourceName.Text = s.SourceName.ToString();
+                PlaceHolder PR1 = new PlaceHolder();
 
-            //LB = new LinkButton[NoOfSources];
-            //PH = new PlaceHolder[NoOfSources];
-            //if (!IsPostBack)
-            //{
-            //    for (int count = 0; count < NoOfSources; count++)
-            //    {
-            //        LB[count] = new LinkButton();
-            //        PH[count] = new PlaceHolder();
-            //        LB[count].Text = ListOfSources[count].SourceName;
+                List<Events> Event = ER.GetEventsid(s.SourceId);
+                TableRow tablerow = new TableRow();
+                TableCell tableCell = new TableCell();
+                foreach(Events OneEvent in  Event)
+                {
+                    Label LE = new Label();
+                    LE.Text = OneEvent.EventName;
+                    PlaceHolder Pr2 = new PlaceHolder();
 
-            //        LB[count].ID = ListOfSources[count].SourceId.ToString();
-            //        PH[count].ID = ListOfSources[count].SourceId.ToString();
+                    List<TemplateEvent> TemplateEvent = TE.GetTemplatesid(OneEvent.EventId);
 
-
-            //        ListOfEvents = Obj.GetEvents(ListOfSources[count].SId);
-            //        foreach (Events Event in ListOfEvents)
-            //        {
-            //            PH[count].Controls.Add(new LiteralControl("<br/>"));
-            //            PH[count].Controls.Add(new LiteralControl("&nbsp;&nbsp;&nbsp"));
-            //            Label L = new Label();
-            //            L.Text = Event.EventName;
-            //            PH[count].Controls.Add(L);
-            //        }
-            //        //LB[count].Command += LinkButtonClick;
-            //        NotificationsBody.Controls.Add(LB[count]);
-            //        NotificationsBody.Controls.Add(PH[count]);
-            //        NotificationsBody.Controls.Add(new LiteralControl("<br/>"));
-            //    }
-            //}
-
-
-
+                    foreach(TemplateEvent OneTemplate in TemplateEvent)
+                    {
+                        
+                    }
+                   
+                       
+                }
+            }
         }   
 
             protected void AddTmpltBtn_Click(object sender, EventArgs e)

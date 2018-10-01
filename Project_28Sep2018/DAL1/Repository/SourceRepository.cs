@@ -30,5 +30,21 @@ namespace DAL1.Repository
             }
             return SourceList;
         }
+        public Source GetSource(int id)
+        {
+            Source S = new Source();
+            DefaultConnection.Open();
+            string str = "select * from Source where Id=" + id;
+            SqlCommand cmd = new SqlCommand(str, DefaultConnection);
+            using (SqlDataReader dr = cmd.ExecuteReader())
+            {
+                dr.Read();
+                S.SourceId = Convert.ToInt32(dr["Id"].ToString());
+                S.SourceName = dr["Name"].ToString();
+                return S;
+                DefaultConnection.Close();
+            }
+            DefaultConnection.Close();
+        }
     }
 }
