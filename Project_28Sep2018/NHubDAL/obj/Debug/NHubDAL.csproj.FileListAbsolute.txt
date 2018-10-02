@@ -1,0 +1,6 @@
+D:\Project\Project_28Sep2018\NHubDAL\bin\Debug\NHubDAL.dll
+D:\Project\Project_28Sep2018\NHubDAL\bin\Debug\NHubDAL.pdb
+D:\Project\Project_28Sep2018\NHubDAL\obj\Debug\NHubDAL.csproj.CoreCompileInputs.cache
+D:\Project\Project_28Sep2018\NHubDAL\obj\Debug\NHubDAL.dll
+D:\Project\Project_28Sep2018\NHubDAL\obj\Debug\NHubDAL.pdb
+D:\Project\Project_28Sep2018\NHubDAL\obj\Debug\NHubDAL.csprojAssemblyReference.cache

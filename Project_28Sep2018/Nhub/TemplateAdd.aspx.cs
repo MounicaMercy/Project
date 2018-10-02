@@ -1,17 +1,15 @@
-﻿using System;
-using DAL.Repository;
-
-
+﻿using NHubDAL.Repository;
+using System;
 namespace Nhub
 {
     public partial class TemplateAdd : System.Web.UI.Page
     {
-        int flag = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Context.User.IsInRole("OperationManager"))
             {
                 Response.Redirect("NotAuthorized.aspx");
+                
             }
             TemplatesRepository Tr = new TemplatesRepository();
             Tr.UpdateStatus();
@@ -30,28 +28,13 @@ namespace Nhub
             string id=tr.Getid(name);
             int ApprovalStatus = 1;
             tr.Insert(Templatename, id, ServiceLineID, NotificationId, ApprovalStatus);
-            flag++;
+            createlbltxt.Text = "Template Created,Now insert the url";
+            uploadlbltxt.Text = "";
         }
-        //protected void Update_Click(object sender, EventArgs e)
-        //{
-        //    TemplatesRepository tr = new TemplatesRepository();
-        //    string Tmpltname = TemplateName.Text;
-        //    int id = tr.GetTemplateId(Tmpltname);
-        //    //int ChannelId = Convert.ToInt32(ChannelDDL.SelectedValue) ;
-        //    //string url = uplaodtxt.Text;
-        //    int ApprovalStatus = 1;
-        //  //  tr.InsertUrl(id, ChannelId, url, ApprovalStatus);
-        //}
-
-        //protected void GVChannel_RowCommand(object sender, GridViewCommandEventArgs e)
-        //{
-        //    int index = Convert.ToInt32(e.CommandArgument);
-        //    GridViewRow row = GVChannel.Rows[index];
-        //    TextBox tb = (TextBox)row.FindControl("TextBox1");
-        //}
         protected void Upload_Click(object sender, EventArgs e)
         {
-            if (flag == 1)
+           
+            try
             {
                 TemplatesRepository tr = new TemplatesRepository();
                 string Tmpltname = TemplateName.Text;
@@ -60,12 +43,14 @@ namespace Nhub
                 string url = URL.Text;
                 int ApprovalStatus = 1;
                 tr.InsertUrl(id, ChannelId, url, ApprovalStatus);
+                Uploadsucces.Text = "Template Inserted";
             }
-            else
+           
+            catch (Exception ex)
             {
                 uploadlbltxt.Text = "First Create the template,then upload your template url!!";
-
             }
+          
         }
     }
 }

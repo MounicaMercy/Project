@@ -157,6 +157,15 @@ namespace Nhub {
         protected global::System.Web.UI.WebControls.Label uploadlbltxt;
         
         /// <summary>
+        /// Uploadsucces control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Uploadsucces;
+        
+        /// <summary>
         /// CreateBtn control.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace Nhub {
         protected global::System.Web.UI.WebControls.Button CreateBtn;
         
         /// <summary>
+        /// createlbltxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label createlbltxt;
+        
+        /// <summary>
         /// CancelBtn control.
         /// </summary>
         /// <remarks>
@@ -173,5 +191,14 @@ namespace Nhub {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelBtn;
+        
+        /// <summary>
+        /// Templatehome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink Templatehome;
     }
 }

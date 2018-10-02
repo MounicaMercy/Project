@@ -4,6 +4,12 @@
     <table class="nav-justified">
           <tr>
             <td class="auto-style4">
+                &nbsp;</td>
+            <td class="auto-style5">
+                &nbsp;</td>
+        </tr>
+          <tr>
+            <td class="auto-style4">
                 <asp:Label ID="SLlbl" runat="server" Text="Service Line:" CssClass="auto-style3" style="font-size: large"></asp:Label>
             </td>
             <td class="auto-style5">
@@ -68,6 +74,8 @@
                 
                 <asp:Label ID="uploadlbltxt" runat="server" Text="   "></asp:Label>
                 
+                <asp:Label ID="Uploadsucces" runat="server" Text="    "></asp:Label>
+                
             </td>
         </tr>
         <tr class="auto-style2" style="font-size: large">
@@ -105,8 +113,11 @@
             <td>
                 <asp:Button ID="CreateBtn" runat="server" CssClass="auto-style3" Text="Create" Width="111px" OnClick="CreateBtn_Click" style="font-size: large" />
                
-                <span class="auto-style3" style="font-size: large">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                <asp:Label ID="createlbltxt" runat="server" Text="    "></asp:Label>
+                <span class="auto-style3" style="font-size: large">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
                 <asp:Button ID="CancelBtn" runat="server" CssClass="auto-style3" OnClick="CancelBtn_Click" Text="Cancel" Width="111px" style="font-size: large" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="Templatehome" runat="server" Height="25px" NavigateUrl="~/Templates.aspx" ToolTip="Click me to go back to Templates Home Page" Width="150px">Template Page</asp:HyperLink>
             </td>
         </tr>
         </table>

@@ -394,6 +394,7 @@
     </Compile>
     <Compile Include="TemplateDelete.aspx.cs">
       <DependentUpon>TemplateDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TemplateDelete.aspx.designer.cs">
       <DependentUpon>TemplateDelete.aspx</DependentUpon>
@@ -428,9 +429,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL1\DAL1.csproj">
-      <Project>{3d2eeb30-5033-48aa-8e06-42b3272b315d}</Project>
-      <Name>DAL1</Name>
+    <ProjectReference Include="..\NHubDAL\NHubDAL.csproj">
+      <Project>{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}</Project>
+      <Name>NHubDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

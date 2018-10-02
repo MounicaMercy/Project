@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nhub", "Nhub\Nhub.csproj", "{A1A664F6-FA2D-4A04-8E56-570E809D7E95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL1", "DAL1\DAL1.csproj", "{3D2EEB30-5033-48AA-8E06-42B3272B315D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHubDAL", "NHubDAL\NHubDAL.csproj", "{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A1A664F6-FA2D-4A04-8E56-570E809D7E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1A664F6-FA2D-4A04-8E56-570E809D7E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1A664F6-FA2D-4A04-8E56-570E809D7E95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D2EEB30-5033-48AA-8E06-42B3272B315D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D2EEB30-5033-48AA-8E06-42B3272B315D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D2EEB30-5033-48AA-8E06-42B3272B315D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D2EEB30-5033-48AA-8E06-42B3272B315D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCBC0A4-12F6-432E-98CF-8F4461CBDB8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

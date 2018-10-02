@@ -1,3 +1,5 @@
+D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.csprojAssemblyReference.cache
+D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.csproj.CoreCompileInputs.cache
 D:\Project\Project_28Sep2018\Nhub\bin\Nhub.dll.config
 D:\Project\Project_28Sep2018\Nhub\bin\Nhub.dll
 D:\Project\Project_28Sep2018\Nhub\bin\Nhub.pdb
@@ -71,10 +73,12 @@ D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.ScriptManager.MSAjax.dll
 D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.ScriptManager.WebForms.dll
 D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.Web.Infrastructure.dll
 D:\Project\Project_28Sep2018\Nhub\bin\Newtonsoft.Json.dll
+D:\Project\Project_28Sep2018\Nhub\bin\NHubDAL.dll
 D:\Project\Project_28Sep2018\Nhub\bin\Owin.dll
 D:\Project\Project_28Sep2018\Nhub\bin\System.Web.Optimization.dll
 D:\Project\Project_28Sep2018\Nhub\bin\System.Web.Providers.dll
 D:\Project\Project_28Sep2018\Nhub\bin\WebGrease.dll
+D:\Project\Project_28Sep2018\Nhub\bin\NHubDAL.pdb
 D:\Project\Project_28Sep2018\Nhub\bin\System.Web.Optimization.xml
 D:\Project\Project_28Sep2018\Nhub\bin\Newtonsoft.Json.xml
 D:\Project\Project_28Sep2018\Nhub\bin\Antlr3.Runtime.pdb
@@ -95,10 +99,6 @@ D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Project\Project_28Sep2018\Nhub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.csprojAssemblyReference.cache
-D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.csproj.CoreCompileInputs.cache
 D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.csproj.CopyComplete
 D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.dll
 D:\Project\Project_28Sep2018\Nhub\obj\Debug\Nhub.pdb
-D:\Project\Project_28Sep2018\Nhub\bin\DAL1.dll
-D:\Project\Project_28Sep2018\Nhub\bin\DAL1.pdb
