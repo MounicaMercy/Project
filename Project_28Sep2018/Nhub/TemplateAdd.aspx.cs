@@ -36,6 +36,7 @@ namespace Nhub
            
             try
             {
+                createlbltxt.Text = "";
                 TemplatesRepository tr = new TemplatesRepository();
                 string Tmpltname = TemplateName.Text;
                 int id = tr.GetTemplateId(Tmpltname);
